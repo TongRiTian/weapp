@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "c-select": "/components/select/select"
+  },
+  "navigationBarTitleText": "我的订单"
+}

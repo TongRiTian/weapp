@@ -1,0 +1,29 @@
+.main{
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: column;
+  padding: 0 40rpx;
+  font-size: 26rpx;
+}
+.input-item{
+  padding: 30rpx 0;
+  border-bottom: 1px solid #ccc;
+  font-size: 28rpx;
+}
+.input-item .input-placeholder{
+  color: #ccc;
+  font-size: 26rpx
+}
+.forget{
+  font-size: 26rpx;
+  align-self: flex-end;
+  margin: 30rpx 0 60rpx;
+}
+button{
+  width: 100%;
+  background: #00156F;
+  color: #fff;
+  font-size: 32rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+}

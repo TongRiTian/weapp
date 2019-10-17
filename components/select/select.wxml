@@ -1,0 +1,6 @@
+<view class="select">
+  <input name="{{name}}" placeholder-class="light" type="{{type}}" value="{{value}}" disabled="{{inputDisabled}}" placeholder="{{placeholder}}" />
+  <picker bindchange="onChange" range="{{selectList}}" value="{{index}}" >
+    <image class="icon-select" src="/images/select.png" />
+  </picker>
+</view>

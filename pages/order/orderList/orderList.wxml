@@ -1,0 +1,43 @@
+<!--index.wxml-->
+<view class="container">
+
+  <view class="add-order">
+    <image class="plus-icon" src="/images/plus-icon.png" bindtap="handleCreate"></image>
+  </view>
+
+  <block wx:for="{{orderList}}" wx:key="index">
+    <view class="list-container">
+      <view class="list-header">
+        <text class="order-text">订单号:{{item.orderNo}}</text>
+        <text class="order-status" wx:if="{{item.payStatus === 1}}">已支付</text>
+        <text class="order-status" wx:else="{{item.payStatus === 0}}">未支付</text>
+      </view>
+
+      <view class="line"></view>
+
+      <view class="list-middle">
+        <text class="list-card">卡号：{{item.cardNo}}</text>
+        <view class="list-info list-middle-row">
+          <text>司机：{{item.driverName}}</text>
+          <text>车型: {{item.trafficType}}</text>
+          <text class="goods">货名：{{item.goodName}}</text>
+        </view>
+        <view class="created-time">下单时间：{{item.createdAt}}</view>
+      </view>
+
+      <view class="line"></view>
+
+      <view class="button-container">
+        <view>
+          <button class="edit" bindtap="handleEdit" data-id="{{item.id}}">编辑</button>
+        </view>
+        <view>
+          <button type="primary" class="see" bindtap="handleView" data-id="{{item.id}}">查看</button>
+        </view>
+        <view>
+          <button class="delete" bindtap="handleDelete" data-id="{{item.id}}">删除</button>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

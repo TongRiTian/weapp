@@ -1,0 +1,22 @@
+.icon-select{
+  width: 22rpx;
+  height: 22rpx;
+  margin: 0 14rpx;
+}
+
+.select{
+  position: relative;
+  display: flex;
+  border: 1rpx solid #eee;
+  border-radius: 4rpx;
+  padding: 10rpx 0;
+  padding-left: 10rpx;
+  justify-content: space-between;
+}
+.select input{
+  font-size: 24rpx;
+}
+.light{
+  color: #ccc;
+}
+

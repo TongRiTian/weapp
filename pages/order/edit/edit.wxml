@@ -1,0 +1,64 @@
+<view class="container">
+  <form bindsubmit="apply">
+    <view class="main">
+      <view class="select-item">
+        <label class="space">货 名：</label>
+        <view>
+          <c-select selectList="{{nameList}}" />
+        </view>
+      </view>
+      <view class="select-item">
+        <label class="space">车 型：</label>
+        <view>
+          <c-select />
+        </view>
+      </view>
+      <view class="select-item">
+        <label class="space">司 机：</label>
+        <view>
+          <c-select />
+        </view>
+      </view>
+      <view class="select-item space">
+        <label class="space">手 机：</label>
+        <view class="full">
+          <c-select />
+        </view>
+      </view>
+      <view class="select-item">
+        <label class="space">车 号：</label>
+        <view>
+          <c-select />
+        </view>
+      </view>
+      <view class="select-item">
+        <label class="space">卡 号：</label>
+        <view class="full">
+          <c-select />
+        </view>
+      </view>
+      <view class="select-item">
+        <label>价格等级：</label>
+        <view class="full">
+          <c-select />
+        </view>
+      </view>
+      <view class="select-item">
+        <label>贸易方式：</label>
+        <view>
+          <c-select />
+        </view>
+      </view>
+      <view class="radio-item">
+        <label>是否满载：</label>
+        <view class="radio-group">
+          <view class="item" bindtap="radioChange" data-index="{{index}}" wx:for="{{isFull}}" wx:key="index">
+            <text>{{item.name}}</text>
+            <view class="radio {{currentIndex == index ? 'select' : ''}}"></view>
+          </view>
+        </view>
+      </view>
+      <button form-type="submit">支付</button>
+    </view>
+  </form>
+</view>

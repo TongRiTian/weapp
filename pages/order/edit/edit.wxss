@@ -1,0 +1,57 @@
+page{
+  box-sizing: border-box;
+  background: #e9e9e9;
+  padding-top: 10rpx;
+}
+.container{
+  height: 100%;
+  background: #fff;
+}
+.select-item{
+  display: flex;
+  align-items: center;
+  margin: 12rpx 0;
+}
+.select-item label{
+  font-size: 28rpx;
+  margin-right: 20rpx;
+}
+.space{
+  word-spacing: 1.7em;
+}
+.radio-item{
+  display: flex;
+  margin: 20rpx 0;
+  font-size: 28rpx;
+}
+.radio-group{
+  display: flex;
+}
+.item {
+  display: flex;
+  align-items: center;
+  margin-right: 40rpx;
+}
+.radio{
+  margin-left: 12rpx;
+  width: 30rpx;
+  height: 30rpx;
+  border: 1rpx solid #999;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+.select{
+  background-color: #999;
+}
+.main{
+  padding: 10rpx 80rpx 0;
+}
+button{
+  background: #00156F;
+  color: #fff;
+  font-size: 32rpx;
+  margin-top: 50rpx;
+}
+.full{
+  flex: 1;
+}
