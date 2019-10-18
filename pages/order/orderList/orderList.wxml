@@ -5,6 +5,10 @@
     <image class="plus-icon" src="/images/plus-icon.png" bindtap="handleCreate"></image>
   </view>
 
+  <view class="no-order-block" wx:if="{{ orderList.length === 0 }}">
+    <text class="no-order-text">暂无订单</text>
+  </view>
+
   <block wx:for="{{orderList}}" wx:key="index">
     <view class="list-container">
       <view class="list-header">
@@ -28,6 +32,7 @@
       <view class="line"></view>
 
       <view class="button-container">
+
         <view wx:if="{{item.isGotCard == 0}}">
           <button class="edit" bindtap="handleEdit" data-id="{{item.id}}">编辑</button>
         </view>

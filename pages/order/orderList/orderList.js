@@ -5,7 +5,8 @@ import { orderList } from '../../../utils/data.js'
 Page({
   data: {
     orderList: [],
-    time: (new Date()).toString()
+    time: (new Date()).toString(),
+    userInfo: null
   },
 
   handleEdit(e) {
@@ -18,6 +19,12 @@ Page({
     this._navigateTo(orderId, 'view')
   },
   handleCreate(e) {
+    // 若没有 跳到登录页面
+    if (! this.data.userInfo) {
+      wx.navigateTo({
+        url: '/pages/login/login',
+      })
+    }
     this._navigateTo("", 'create')
   },
   handleDelete(e) {
@@ -37,13 +44,21 @@ Page({
       url: `/pages/order/edit/edit?id=${orderId}&action=${action}`,
     })
   },
-
   //事件处理函数
-  onLoad: function () {
-    console.log(orderList)
+  onShow: function () {
+    // 获取登录用户信息
+    const userInfo = wx.getStorageSync('userInfo')
+    console.log(userInfo)
     this.setData({
-      orderList: orderList
+      userInfo: wx.getStorageSync('userInfo')
     })
+
+    // 模拟 如果有登录用户信息，才显示订单假数据
+    if (this.data.userInfo) {
+      this.setData({
+        orderList: orderList
+      })
+    }
     console.log(this.data.orderList)
   }
 })

@@ -1,5 +1,5 @@
 <view class="container">
-  <view class="user">
+  <view class="user" wx:if="{{userInfo.userName}}">
     <image src="/images/timg.jpg" class="avatar" />
     <view class="user-info">
       <view class="info-item">
@@ -23,5 +23,10 @@
         <text>{{userInfo.birthday}}</text>
       </view>
     </view>
+  </view>
+
+  <view class="login-block" wx:if="{{!userInfo.userName}}">
+    <text class="login-tip">暂未登录</text>
+    <button class="login-button" bindtap="handleLogin">登录</button>
   </view>
 </view>

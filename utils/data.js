@@ -6,6 +6,11 @@ export const userInfo = {
   birthday: '8月1日'
 }
 
+export const loginData = {
+  userName: "15927273406",
+  password: "123456"
+}
+
 export const orderList = [
   {
     id: 1,

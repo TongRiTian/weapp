@@ -4,11 +4,11 @@
       <view class="input">
         <view class="input-item">
           <!-- <text>手机号</text> -->
-          <input name="userName" placeholder="手机号" type="number" />
+          <input name="userName" placeholder="手机号" value="{{mobile}}" type="number" />
         </view>
         <view class="input-item">
           <!-- <text>登录密码</text> -->
-          <input name="password" placeholder="登录密码" type="password" />
+          <input name="password" placeholder="登录密码" value="{{password}}" type="password" />
         </view>
       </view>
       <view class="forget" bindtap="forgetPswd">忘记密码</view>
