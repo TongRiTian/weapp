@@ -16,3 +16,14 @@
     </view>
   </form>
 </view>
+
+<view class="modal" wx:if="{{maskShow}}">
+  <view class="content">
+    <view class="modal-main">
+      <input placeholder="请输入您的邮箱" />
+      <button>找回</button>
+    </view>
+    <view class="mask" bindtap="onClose">
+    </view>
+  </view>
+</view>

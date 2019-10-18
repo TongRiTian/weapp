@@ -16,6 +16,9 @@ page{
   font-size: 28rpx;
   margin-right: 20rpx;
 }
+.select-item > text{
+  font-size: 28rpx;
+}
 .space{
   word-spacing: 1.7em;
 }

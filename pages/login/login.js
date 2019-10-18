@@ -2,7 +2,8 @@
 Page({
   data: {
     mobile: null,
-    password: ''
+    password: '',
+    maskShow: false
   },
 
   onLoad: function (options) {
@@ -15,7 +16,15 @@ Page({
   },
 
   forgetPswd() {
-    
+    this.setData({
+      maskShow: true
+    })
+  },
+
+  onClose() {
+    this.setData({
+      maskShow: false
+    })
   }
 
 })

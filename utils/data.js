@@ -16,6 +16,11 @@ export const orderList = [
     goodName: "其他",
     payStatus: 0,
     createdAt: "2019-10-16 19:30",
+    carNo: 321,
+    mobile: 1351234567,
+    priceLevel: '价格等级1',
+    method: '销售',
+    isFull: 0
   },
   {
     id: 2,
@@ -26,6 +31,48 @@ export const orderList = [
     goodName: "其他",
     payStatus: 1,
     createdAt: "2019-10-16 20:30",
+    carNo: 322,
+    mobile: 1351234561,
+    priceLevel: '价格等级2',
+    method: '采购',
+    isFull: 1
   }
 ]
+
+export const selectList = {
+  productNameList: [
+    '货名1',
+    '货名2',
+    '货名3',
+  ],
+  carType: [
+    '车型1',
+    '车型2',
+    '车型3'
+  ],
+  priceLevel: [
+    '价格等级1',
+    '价格等级2',
+    '价格等级3',
+  ],
+  method: [
+    '销售',
+    '采购'
+  ],
+  driver: [
+    '司机1',
+    '司机2',
+    '司机3',
+  ],
+  mobile: [
+    '1351231344',
+    '1351231345',
+    '1351231346',
+  ],
+  carNo: [
+    '车号1',
+    '车号2',
+    '车号3'
+  ]
+}
 

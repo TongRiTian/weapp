@@ -4,55 +4,130 @@
       <view class="select-item">
         <label class="space">货 名：</label>
         <view>
-          <c-select selectList="{{nameList}}" />
+          <c-select
+           placeholder="可手动输入"
+           selectEnable="{{selectEnable}}"
+           inputDisabled="{{inputDisabled}}"
+           data-key="name"
+           value="{{name}}"
+           selectValue="{{nameIndex}}"
+           bindselectChange="selectChange"
+           selectList="{{nameList}}" />
         </view>
       </view>
       <view class="select-item">
         <label class="space">车 型：</label>
         <view>
-          <c-select />
+          <c-select
+           placeholder="可手动输入"
+           selectEnable="{{selectEnable}}"
+           inputDisabled="{{inputDisabled}}"
+           data-key="carType"
+           value="{{carType}}"
+           selectValue="{{carTypeIndex}}"
+           bindselectChange="selectChange"
+           selectList="{carTypeList}}"
+          />
         </view>
       </view>
       <view class="select-item">
         <label class="space">司 机：</label>
         <view>
-          <c-select />
+          <c-select
+           placeholder="可手动输入"
+           selectEnable="{{selectEnable && driverList.length}}"
+           inputDisabled="{{inputDisabled}}"
+           data-key="driver"
+           value="{{driver}}"
+           selectValue="{{driverIndex}}"
+           bindselectChange="selectChange"
+           selectList="{{driverList}}"
+           />
         </view>
       </view>
       <view class="select-item space">
         <label class="space">手 机：</label>
         <view class="full">
-          <c-select />
+          <c-select
+           placeholder="可手动输入"
+           selectEnable="{{selectEnable && mobileList.length}}"
+           inputDisabled="{{inputDisabled}}"
+           type="number"
+           data-key="mobile"
+           value="{{mobile}}"
+           selectValue="{{mobileIndex}}"
+           bindselectChange="selectChange"
+           selectList="{{mobileList}}"
+           />
         </view>
       </view>
       <view class="select-item">
         <label class="space">车 号：</label>
         <view>
-          <c-select />
+          <c-select
+           placeholder="可手动输入"
+           selectEnable="{{selectEnable && carNoList.length}}"
+           inputDisabled="{{inputDisabled}}"
+           data-key="carNo"
+           value="{{carNo}}"
+           selectValue="{{carNoIndex}}"
+           bindselectChange="selectChange"
+           selectList="{{carNoList}}"
+           />
         </view>
       </view>
       <view class="select-item">
         <label class="space">卡 号：</label>
         <view class="full">
-          <c-select />
+          <c-select
+           placeholder="可手动输入"
+           selectEnable="{{selectEnable}}"
+           inputDisabled="{{inputDisabled}}"
+           data-key="cardNo"
+           value="{{cardNo}}"
+           selectValue="{{cardNoIndex}}"
+           bindselectChange="selectChange"
+           selectList="{{cardNoList}}"
+           />
         </view>
       </view>
       <view class="select-item">
         <label>价格等级：</label>
         <view class="full">
-          <c-select />
+          <c-select
+           placeholder="可手动输入"
+           selectEnable="{{selectEnable}}"
+           inputDisabled="{{inputDisabled}}"
+           data-key="priceLevel"
+           value="{{priceLevel}}"
+           selectValue="{{priceLevelIndex}}"
+           bindselectChange="selectChange"
+           selectList="{{priceLevelList}}"
+           />
         </view>
       </view>
       <view class="select-item">
         <label>贸易方式：</label>
         <view>
-          <c-select />
+          <c-select placeholder="选择贸易方式"
+           selectEnable="{{action != 'view'}}"
+           inputDisabled="{{true}}"
+           data-key="method"
+           value="{{method}}"
+           selectValue="{{methodIndex}}"
+           bindselectChange="selectChange"
+           selectList="{{methodList}}"
+           />
         </view>
       </view>
-      <view class="radio-item">
+      <view class="select-item" wx:if="action == 'view'">
+        <label>是否满载：</label>
+        <text>{{isFull == 0 ? '否' : '是'}}</text>
+      </view>
+      <view class="radio-item" wx:else>
         <label>是否满载：</label>
         <view class="radio-group">
-          <view class="item" bindtap="radioChange" data-index="{{index}}" wx:for="{{isFull}}" wx:key="index">
+          <view class="item" bindtap="radioChange" data-index="{{index}}" wx:for="{{isFullList}}" wx:key="index">
             <text>{{item.name}}</text>
             <view class="radio {{currentIndex == index ? 'select' : ''}}"></view>
           </view>

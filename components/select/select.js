@@ -15,7 +15,7 @@ Component({
     },
     placeholder: {
       type: String,
-      value: '可手动输入'
+      value: ''
     },
     selectList: {
       type: Array,
@@ -24,15 +24,23 @@ Component({
     inputDisabled: {
       type: Boolean,
       value: false
+    },
+    selectEnable: {
+      type: Boolean,
+      value: false
+    },
+    selectValue: {
+      type: Number,
     }
   },
   data: {
-    index: 0
+    
   },
 
   methods: {
     onChange(e) {
-      console.log(e.detail.value)
+      const value = e.detail.value
+      this.triggerEvent('selectChange', value)
     }
   }
 })
