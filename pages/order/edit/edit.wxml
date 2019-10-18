@@ -120,7 +120,7 @@
            />
         </view>
       </view>
-      <view class="select-item" wx:if="action == 'view'">
+      <view class="select-item" wx:if="{{action === 'view'}}">
         <label>是否满载：</label>
         <text>{{isFull == 0 ? '否' : '是'}}</text>
       </view>

@@ -28,7 +28,7 @@
       <view class="line"></view>
 
       <view class="button-container">
-        <view>
+        <view wx:if="{{item.isGotCard == 0}}">
           <button class="edit" bindtap="handleEdit" data-id="{{item.id}}">编辑</button>
         </view>
         <view>

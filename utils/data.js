@@ -20,7 +20,8 @@ export const orderList = [
     mobile: 1351234567,
     priceLevel: '价格等级1',
     method: '销售',
-    isFull: 0
+    isFull: 0,
+    isGotCard: 0
   },
   {
     id: 2,
@@ -35,7 +36,8 @@ export const orderList = [
     mobile: 1351234561,
     priceLevel: '价格等级2',
     method: '采购',
-    isFull: 1
+    isFull: 1,
+    isGotCard: 1
   }
 ]
 

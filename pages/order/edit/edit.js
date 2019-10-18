@@ -41,14 +41,18 @@ Page({
   },
   onLoad: function (options) {
     const { id, action } = options
-    console.log(id)
+    console.log(id, action)
     if (action) {    
       let selectEnable, inputDisabled
       if(action == 'view') {
         selectEnable = false
         inputDisabled = true
         this.getDetail(id)
-      }else{
+      } else if (action == 'edit'){
+        selectEnable = true
+        inputDisabled = false
+        this.getDetail(id)
+      } else {
         selectEnable = true
         inputDisabled = false
       }
