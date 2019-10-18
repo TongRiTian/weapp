@@ -10,7 +10,7 @@ page{
 .select-item{
   display: flex;
   align-items: center;
-  margin: 12rpx 0;
+  margin: 32rpx 0;
 }
 .select-item label{
   font-size: 28rpx;
@@ -18,6 +18,9 @@ page{
 }
 .select-item > text{
   font-size: 28rpx;
+}
+.select-item > view{
+  flex: 1;
 }
 .space{
   word-spacing: 1.7em;
@@ -54,7 +57,4 @@ button{
   color: #fff;
   font-size: 32rpx;
   margin-top: 50rpx;
-}
-.full{
-  flex: 1;
 }

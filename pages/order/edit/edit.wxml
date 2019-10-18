@@ -26,7 +26,7 @@
            value="{{carType}}"
            selectValue="{{carTypeIndex}}"
            bindselectChange="selectChange"
-           selectList="{carTypeList}}"
+           selectList="{{carTypeList}}"
           />
         </view>
       </view>
@@ -133,7 +133,7 @@
           </view>
         </view>
       </view>
-      <button form-type="submit">支付</button>
+      <button wx:if="{{showButton}}" form-type="submit">支付</button>
     </view>
   </form>
 </view>

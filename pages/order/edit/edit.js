@@ -37,7 +37,8 @@ Page({
     cardNo: '',
     cardNoList: [],
     cardNoIndex: null,
-    isFull: null
+    isFull: null,
+    showButton: true
   },
   onLoad: function (options) {
     const { id, action } = options
@@ -47,6 +48,7 @@ Page({
       if(action == 'view') {
         selectEnable = false
         inputDisabled = true
+        this.setData({ showButton: false })
         this.getDetail(id)
       } else if (action == 'edit'){
         selectEnable = true
