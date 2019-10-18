@@ -1,3 +1,12 @@
+.logo{
+  display: flex;
+  justify-content: center;
+  margin-top: 40rpx; 
+}
+.logo image{
+  width: 250rpx;
+  height: 250rpx;
+}
 .main{
   margin-top: 20rpx;
   display: flex;

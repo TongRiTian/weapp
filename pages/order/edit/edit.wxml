@@ -92,6 +92,20 @@
         </view>
       </view>
       <view class="select-item">
+        <label class="space">合 同：</label>
+        <view class="full">
+          <c-select
+           placeholder="可手动输入"
+           selectEnable="{{selectEnable}}"
+           inputDisabled="{{inputDisabled}}"
+           data-key="constract"
+           value="{{constract}}"
+           bindselectChange="selectChange"
+           selectList="{{constractList}}"
+           />
+        </view>
+      </view>
+      <view class="select-item">
         <label>价格等级：</label>
         <view class="full">
           <c-select

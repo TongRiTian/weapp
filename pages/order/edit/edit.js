@@ -37,6 +37,8 @@ Page({
     cardNo: '',
     cardNoList: [],
     cardNoIndex: null,
+    constract: '',
+    constractList: [],
     isFull: null,
     showButton: true
   },
@@ -74,7 +76,8 @@ Page({
       methodList: selectList.method,
       driverList: selectList.driver,
       mobileList: selectList.mobile,
-      carNoList: selectList.carNo
+      carNoList: selectList.carNo,
+      constractList: selectList.constract
     })
   },
 
@@ -95,6 +98,7 @@ Page({
       priceLevel: orderDetail.priceLevel,
       method: orderDetail.method,
       isFull: orderDetail.isFull,
+      constract: orderDetail.constract
     })
   },
 

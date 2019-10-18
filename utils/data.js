@@ -26,7 +26,8 @@ export const orderList = [
     priceLevel: '价格等级1',
     method: '销售',
     isFull: 0,
-    isGotCard: 0
+    isGotCard: 0,
+    constract: '合同1'
   },
   {
     id: 2,
@@ -42,7 +43,8 @@ export const orderList = [
     priceLevel: '价格等级2',
     method: '采购',
     isFull: 1,
-    isGotCard: 1
+    isGotCard: 1,
+    constract: '合同2'
   }
 ]
 
@@ -80,6 +82,11 @@ export const selectList = {
     '车号1',
     '车号2',
     '车号3'
+  ],
+  constract: [
+    '合同1',
+    '合同2',
+    '合同3'
   ]
 }
 
