@@ -77,7 +77,8 @@ Page({
       driverList: selectList.driver,
       mobileList: selectList.mobile,
       carNoList: selectList.carNo,
-      constractList: selectList.constract
+      constractList: selectList.constract,
+      cardNoList: selectList.cardNo
     })
   },
 

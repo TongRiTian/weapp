@@ -1,6 +1,6 @@
 .icon-select{
-  width: 22rpx;
-  height: 22rpx;
+  width: 30rpx;
+  height: 30rpx;
   margin: 0 14rpx;
 }
 
