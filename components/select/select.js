@@ -41,6 +41,11 @@ Component({
     onChange(e) {
       const value = e.detail.value
       this.triggerEvent('selectChange', value)
+    },
+
+    onInput(e) {
+      const value = e.detail.value
+      this.triggerEvent('onInput', value)
     }
   }
 })

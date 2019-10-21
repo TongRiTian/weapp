@@ -31,7 +31,7 @@ Page({
     mobile: '',
     mobileList: [],
     mobileIndex: null,
-    cartNo: '',
+    carNo: '',
     carNoList: [],
     carNoIndex: null,
     cardNo: '',
@@ -103,8 +103,21 @@ Page({
     })
   },
 
-  apply(e) {
-    console.log(e.detail.value)
+  apply() {
+    const data = this.data
+    const formData = {
+      constract: data.constract,
+      name: data.name,
+      carType: data.carType,
+      driver: data.driver,
+      mobile: data.mobile,
+      carNo: data.carNo,
+      cardNo: data.cardNo,
+      priceLevel: data.priceLevel,
+      method: data.method,
+      isFull: data.currentIndex ? 1 : 0
+    }
+    console.log(formData)
   },
 
   radioChange(e) {
@@ -119,6 +132,13 @@ Page({
     const index = Number(e.detail)
     let change = {}
     change[key] = this.data[key + 'List'][index]
+    this.setData(change)
+  },
+
+  onInput(e) {
+    const key = e.currentTarget.dataset.key
+    let change = {}
+    change[key] = e.detail
     this.setData(change)
   }
 })

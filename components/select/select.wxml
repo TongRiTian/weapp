@@ -1,5 +1,5 @@
 <view class="select">
-  <input name="{{name}}" placeholder-class="light" type="{{type}}" value="{{value}}" disabled="{{inputDisabled}}" placeholder="{{placeholder}}" />
+  <input name="{{name}}" bindinput="onInput" placeholder-class="light" type="{{type}}" value="{{value}}" disabled="{{inputDisabled}}" placeholder="{{placeholder}}" />
   <picker wx:if="{{selectEnable}}" bindchange="onChange" range="{{selectList}}" value="{{selectValue}}" >
     <image class="icon-select" src="/images/select.png" />
   </picker>

@@ -11,6 +11,7 @@
            data-key="constract"
            value="{{constract}}"
            bindselectChange="selectChange"
+           bindonInput="onInput"
            selectList="{{constractList}}"
            />
         </view>
@@ -26,6 +27,7 @@
            value="{{name}}"
            selectValue="{{nameIndex}}"
            bindselectChange="selectChange"
+           bindonInput="onInput"
            selectList="{{nameList}}" />
         </view>
       </view>
@@ -40,6 +42,7 @@
            value="{{carType}}"
            selectValue="{{carTypeIndex}}"
            bindselectChange="selectChange"
+           bindonInput="onInput"
            selectList="{{carTypeList}}"
           />
         </view>
@@ -55,6 +58,7 @@
            value="{{driver}}"
            selectValue="{{driverIndex}}"
            bindselectChange="selectChange"
+           bindonInput="onInput"
            selectList="{{driverList}}"
            />
         </view>
@@ -71,6 +75,7 @@
            value="{{mobile}}"
            selectValue="{{mobileIndex}}"
            bindselectChange="selectChange"
+           bindonInput="onInput"
            selectList="{{mobileList}}"
            />
         </view>
@@ -86,6 +91,7 @@
            value="{{carNo}}"
            selectValue="{{carNoIndex}}"
            bindselectChange="selectChange"
+           bindonInput="onInput"
            selectList="{{carNoList}}"
            />
         </view>
@@ -101,6 +107,7 @@
            value="{{cardNo}}"
            selectValue="{{cardNoIndex}}"
            bindselectChange="selectChange"
+           bindonInput="onInput"
            selectList="{{cardNoList}}"
            />
         </view>
@@ -117,6 +124,7 @@
            value="{{priceLevel}}"
            selectValue="{{priceLevelIndex}}"
            bindselectChange="selectChange"
+           bindonInput="onInput"
            selectList="{{priceLevelList}}"
            />
         </view>
