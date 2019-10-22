@@ -152,7 +152,7 @@
         <view class="radio-group">
           <view class="item" bindtap="radioChange" data-index="{{index}}" wx:for="{{isFullList}}" wx:key="index">
             <text>{{item.name}}</text>
-            <view class="radio {{currentIndex == index ? 'select' : ''}}"></view>
+            <view class="radio {{isFull == item.value ? 'select' : ''}}"></view>
           </view>
         </view>
       </view>

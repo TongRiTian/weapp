@@ -123,7 +123,8 @@ Page({
   radioChange(e) {
     console.log(e)
     const currentIndex = e.currentTarget.dataset.index
-    this.setData({ currentIndex })
+    console.log(this.data.isFullList[currentIndex])
+    this.setData({ isFull: this.data.isFullList[currentIndex].value })
   },
 
   selectChange(e) { 
